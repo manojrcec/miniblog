@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-sm-10">
+    <h3 class="text-black my-5">SUCCESS STORIES</h3>
+       {% for post in posts %}
+    <div class="jumbotron jumbotron-fluid jumbo-color shadow">
+        <div class="container">
+          <h1 class="display-4 font-weight-bold">{{post.title}}</h1>
+          <p class="lead"><img src="{{post.photo}}" alt="" class="img-fluid img-thumbnail" width="200" height="200"></p>
+          <p class="lead">{{post.desc}}</p>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+
+{% endblock content %} 
